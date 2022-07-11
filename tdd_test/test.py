@@ -1,5 +1,5 @@
 import unittest
-import Calc as calcClass
+import calc as calcClass
 
 class TestCalc(unittest.TestCase):
 
@@ -9,20 +9,20 @@ class TestCalc(unittest.TestCase):
     #     self.assertEqual(result, 15)
 
     def test_add(self):
-        self.assertEqual(calcClass.Calc.add(10, 5), 15)
-        self.assertEqual(calcClass.Calc.add(-1, 1), 0)
-        self.assertEqual(calcClass.Calc.add(-1, -1), -2)
+        self.assertEqual(calcClass.calc.add(10, 5), 15)
+        self.assertEqual(calcClass.calc.add(-1, 1), 0)
+        self.assertEqual(calcClass.calc.add(-1, -1), -2)
 
-    def test_subtract(self):
-        self.assertEqual(calcClass.calc.subtract(10, 5), 5)
-        self.assertEqual(calcClass.calc.subtract(-1, 1), -2)
-        self.assertEqual(calcClass.calc.subtract(-1, -1), 0)
+    # def test_subtract(self):
+    #     self.assertEqual(calcClass.calc.subtract(10, 5), 5)
+    #     self.assertEqual(calcClass.calc.subtract(-1, 1), -2)
+    #     self.assertEqual(calcClass.calc.subtract(-1, -1), 0)
 
 
-    def test_multiply(self):
-        self.assertEqual(calcClass.calc.multiply(10, 5), 50)
-        self.assertEqual(calcClass.calc.multiply(-1, 1), -1)
-        self.assertEqual(calcClass.calc.multiply(-1, -1), 1)
+    # def test_multiply(self):
+    #     self.assertEqual(calcClass.calc.multiply(10, 5), 50)
+    #     self.assertEqual(calcClass.calc.multiply(-1, 1), -1)
+    #     self.assertEqual(calcClass.calc.multiply(-1, -1), 1)
 
 if __name__ == '__main__':
     unittest.main
