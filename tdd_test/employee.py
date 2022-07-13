@@ -1,6 +1,3 @@
-# from sys import last_traceback
-
-
 class Employee:
 
     def __init__(self, name, passw, email, username):
