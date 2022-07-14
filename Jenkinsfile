@@ -29,7 +29,7 @@ pipeline {
         stage ('Package'){
             steps {
                 echo 'Packaging...'
-                // bat 'c:/Users/Administrator/AppData/Local/Programs/Python/Python39/python.exe -m build'
+                bat 'c:/Users/Administrator/AppData/Local/Programs/Python/Python39/python.exe -m build'
                 bat 'dir'
             }
         }
