@@ -42,7 +42,7 @@ pipeline {
              steps {
                 echo 'Deploying....'
                 echo "u${username} -p${password}"
-                // bat "twine upload  --repository-url http://localhost:8081/repository/tdd-in-maven-repo/ dist/* -u${username} -p${password}"
+                bat "twine upload  --repository-url http://localhost:8081/repository/tdd-test/ dist/* -u${username} -p${password}"
             }
         }
     }
