@@ -10,7 +10,7 @@ pipeline {
         stage('Build'){
             steps{
                 git branch: 'main', url: 'https://github.com/mazzielafa/TDD-in-python.git'
-                bat 'rd /s /q "dist"'
+                bat 'dir'
             }
         }
         stage('Compile') {
