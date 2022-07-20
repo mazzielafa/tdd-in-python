@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'docker',url: 'https://github.com/mazzielafa/TDD-in-python.git'
+                git branch: 'docker',url: 'https://github.com/mazzielafa/tdd-in-python.git'
             }
         }    
         stage('Requirements') {
@@ -29,14 +29,14 @@ pipeline {
         stage('Create image') {
             steps {
                 echo 'creating image...'
-                sh 'docker build -t kubemazl/TDD-Python-Test -f Dockerfile .'
+                sh 'docker build -t kubemazl/tdd-python-test -f Dockerfile .'
             }
         } 
         stage('Publish image') {
             steps {
                 echo 'pushing image...'
                 withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
-                    sh 'docker push kubemazl/TDD-Python-Test:latest'
+                    sh 'docker push kubemazl/tdd-python-test:latest'
                 }
             }
         } 

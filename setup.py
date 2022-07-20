@@ -9,9 +9,9 @@ setup(
     description='An example python package',
     long_description=open('README.txt').read(),
     install_requires=['numpy'],
-    url='https://github.com/mazzielafa/TDD-in-python.git',
+    url='https://github.com/mazzielafa/tdd-in-python.git',
     author='',
-    author_email='myemail@example.com'
+    author_email='mazzieola@hotmail.com'
 )
 
 
