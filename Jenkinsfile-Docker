@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'Acceptance...'
             //     sh 'python3 -m unittest discover -s tests/acceptance -v'
-            // }
+            }
         }     
         stage('Create image') {
             steps {
