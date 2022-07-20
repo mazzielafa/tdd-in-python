@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'docker',url: 'https://github.com/mazzielafa/TDD-in-python.git'
+                git branch: 'main',url: 'https://github.com/mazzielafa/tdd-in-python.git'
 	        }
         }        
         stage('Requirements') {
@@ -29,14 +29,14 @@ pipeline {
         stage('Create image') {
             steps {
                 echo 'creating image...'
-                sh 'docker build -t mazziebootcampregistry.azurecr.io/TDD-Python-Test:latest -f Dockerfile .'
+                sh 'docker build -t mazziebootcampregistry.azurecr.io/tdd-in-python:latest -f Dockerfile .'
             }
         } 
         stage('Publish image') {
             steps {
                 echo 'pushing image...'
                 withDockerRegistry([ credentialsId: "azure-credentials", url: "https://mazziebootcampregistry.azurecr.io" ]) {
-                    sh 'docker push mazziebootcampregistry.azurecr.io/TDD-Python-Test:latest'
+                    sh 'docker push mazziebootcampregistry.azurecr.io/tdd-in-python:latest'
                 }
             }
         } 
