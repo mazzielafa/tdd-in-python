@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'docker',url: 'https://github.com/mazzielafa/tdd-in-python.git'
+                git branch: 'main',url: 'https://github.com/mazzielafa/tdd-in-python.git'
             }
         }    
         stage('Requirements') {
