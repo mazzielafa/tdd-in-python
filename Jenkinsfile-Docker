@@ -19,7 +19,7 @@ pipeline {
         stage('Unit/Integration tests') {
             steps {
                 echo 'Unit/Integration...'
-                // sh 'python3 -m unittest discover -s tests/unit -v'
+                sh 'python3 -m unittest discover -s tests/unit -v'
             }
         }        
         stage('Acceptance tests') {
