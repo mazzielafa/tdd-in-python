@@ -6,8 +6,8 @@ def fizzBuzz(value):
         return "Fizz"
     if (value % 5) == 0:
         return "Buzz"
-    if (value % 15) == 0:
-        return "FizzBuzz"
+    # if (value % 15) == 0:
+    #     return "FizzBuzz"
     return str(value)
 
 # defining what outcome I want the values to do.
