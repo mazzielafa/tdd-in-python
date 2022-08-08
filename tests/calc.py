@@ -1,4 +1,4 @@
-class Calc:
+class calc:
     """ A simple calculator App"""
 
     def add(x, y):
