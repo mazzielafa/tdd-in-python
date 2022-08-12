@@ -1,6 +1,3 @@
-from json import tool
-
-
 class Checkout:
     class Discount:
         def __init__(self, numOfItems, price):
