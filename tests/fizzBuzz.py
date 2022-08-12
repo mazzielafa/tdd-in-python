@@ -1,20 +1,16 @@
-from multiprocessing.sharedctypes import Value
-import unittest
-
 def fizzBuzz(value):
-    if (value % 3) == 0:
-        return "Fizz"
-    if (value % 5) == 0:
-        return "Buzz"
+        if (value % 3) == 0:
+            return "Fizz"
+        if (value % 5) == 0:
+            return "Buzz"
     # if (value % 15) == 0:
     #     return "FizzBuzz"
-    return str(value)
+        return str(value)
 
-# defining what outcome I want the values to do.
+    # defining what outcome I want the values to do.
 def checkReturnVal(value, expectedRetVal):
     retVal = fizzBuzz(value)
     assert retVal == expectedRetVal
-    
 
 def test_return1():
     checkReturnVal(1, "1")
